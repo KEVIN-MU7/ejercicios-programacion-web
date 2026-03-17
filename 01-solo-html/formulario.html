@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Taller 1 - Registro de Usuario</title>
+</head>
+<body bgcolor="#f0f0f0"> 
+
+    <table border="0" align="center" width="600" bgcolor="white" cellpadding="10">
+        <tr>
+            <td>
+                <h1 align="center">Formulario de Inscripción</h1>
+                <p align="center"><i>Complete sus datos para el registro en el sistema</i></p>
+                <hr>
+
+                <form action="mailto:unaprueba" method="POST">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td width="40%"><b>Nombres y Apellidos:</b></td>
+                            <td><input type="text" name="nombre" size="30" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Tipo de Documento:</b></td>
+                            <td>
+                                <select name="tipo_doc">
+                                    <option value="CC">Cédula de Ciudadanía</option>
+                                    <option value="TI">Tarjeta de Identidad</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Número de Documento:</b></td>
+                            <td><input type="text" name="cedula" size="15" maxlength="15"></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Usuario:</b></td>
+                            <td>
+                                <input type="text" name="usuario" pattern="[a-zA-Z]{1,14}[0-9]{0,2}" minlength="3" maxlength="16" required>
+                                <br><small>(Letras y hasta 2 números al final)</small>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Contraseña:</b></td>
+                            <td><input type="password" name="clave" minlength="16" maxlength="16" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Fecha de Inscripción:</b></td>
+                            <td><input type="date" name="fecha" min="2026-02-15" max="2026-03-06" required></td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top"><b>Hobbies / Deportes:</b></td>
+                            <td>
+                                <table border="0">
+                                    <tr>
+                                        <td><input type="checkbox" name="hobby1" value="futbol"> Fútbol</td>
+                                        <td><input type="checkbox" name="hobby2" value="gym"> Gimnasio</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="hobby3" value="leer"> Leer</td>
+                                        <td><input type="checkbox" name="hobby4" value="musica"> Música</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="hobby5" value="videojuegos"> Videojuegos</td>
+                                        <td><input type="checkbox" name="hobby6" value="viajar"> Viajar</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top"><b>Observaciones:</b></td>
+                            <td><textarea name="notas" cols="30" rows="4"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" align="center">
+                                <br>
+                                <input type="submit" value="Registrar Usuario">
+                                <input type="reset" value="Limpiar Campos">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <p align="center"><font size="2">Universidad de Cundinamarca - Programación Web</font></p>
+
+</body>
+</html>
